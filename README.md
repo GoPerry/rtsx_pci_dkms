@@ -1,10 +1,12 @@
-This is kernel module for Ralink RT3290 Bluetooth
+This is kernel dkms  module for RTS525A PCI Sdcard Reader for RHEL6.8 OS kernel.
+
 
 ##Installation
-```sh
-make
-sudo make install
-sudo dkms install rtbth/3.9.4
-```
+dkms add  -m rtsx_pci -v 2.6
+dkms build -m rtsx_pci -v 2.6
+dkms install -m rtsx_pci -v 2.6
 
-This driver is not well maitained. If you have a bugreport, you'd better fork and fix, because neither I nor Realtek pays enough attention on this.
+remove:
+dkms remove  -m rtsx_pci -v 2.6 --all
+
+
